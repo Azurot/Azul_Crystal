@@ -34,6 +34,12 @@ FalknerGroup:
 		db MUD_SLAP
 		db GUST
 		db 0
+		
+	db 15, SKARMORY
+		db GUST
+		db SPIKES
+		db WHIRLWIND
+		db CURSE
 
 	db $ff ; end
 
@@ -51,13 +57,19 @@ WhitneyGroup:
 
 	; party
 
-	db 18, CLEFAIRY
+	db 20, CLEFAIRY
 		db DOUBLESLAP
 		db MIMIC
 		db ENCORE
 		db METRONOME
+		
+	db 20, JIGGLYPUFF
+		db DOUBLESLAP
+		db ENCORE
+		db SING
+		db ROLLOUT
 
-	db 20, MILTANK
+	db 26, MILTANK
 		db ROLLOUT
 		db ATTRACT
 		db STOMP
@@ -79,19 +91,25 @@ BugsyGroup:
 
 	; party
 
-	db 14, METAPOD
+	db 14, BUTTERFREE
 		db TACKLE
 		db STRING_SHOT
 		db HARDEN
 		db 0
 
-	db 14, KAKUNA
+	db 14, BEEDRILL
 		db POISON_STING
 		db STRING_SHOT
 		db HARDEN
 		db 0
-
-	db 16, SCYTHER
+		
+	db 16, LEDIAN
+		db COMET_PUNCH
+		db MACH_PUNCH
+		db LEECH LIFE
+		db 0
+		
+	db 18, SCYTHER
 		db QUICK_ATTACK
 		db LEER
 		db FURY_CUTTER
@@ -113,29 +131,35 @@ MortyGroup:
 
 	; party
 
-	db 21, GASTLY
-		db LICK
-		db SPITE
+	db 25, MURKROW
+		db PURSUIT
+		db GUST
 		db MEAN_LOOK
-		db CURSE
+		db WING_ATTACK
 
-	db 21, HAUNTER
+	db 25, HAUNTER
 		db HYPNOSIS
-		db MIMIC
+		db ICE_PUNCH
 		db CURSE
 		db NIGHT_SHADE
 
-	db 25, GENGAR
+	db 32, GENGAR
 		db HYPNOSIS
 		db SHADOW_BALL
 		db MEAN_LOOK
 		db DREAM_EATER
 
-	db 23, HAUNTER
+	db 26, HAUNTER
 		db SPITE
 		db MEAN_LOOK
-		db MIMIC
+		db THUNDER_PUNCH
 		db NIGHT_SHADE
+		
+	db 34, MISDREAVOUS
+		db PSYBEAM
+		db SHADOW_BALL
+		db HYPNOSIS
+		db RECOVER
 
 	db $ff ; end
 
@@ -153,21 +177,33 @@ PryceGroup:
 
 	; party
 
-	db 27, SEEL
+	db 32, DEWGONG
 		db HEADBUTT
 		db ICY_WIND
 		db AURORA_BEAM
 		db REST
+		
+	db 33, CLOYSTER
+		db SPIKE_CANNON
+		db SURF
+		db ICY_WIND
+		db WITHDRAW
 
-	db 29, DEWGONG
+	db 35, DEWGONG
 		db HEADBUTT
 		db ICY_WIND
 		db AURORA_BEAM
 		db REST
-
-	db 31, PILOSWINE
+		
+	db 38, GLAILE
 		db ICY_WIND
-		db FURY_ATTACK
+		db DOUBLE_EDGE
+		db WITHDRAW
+		db RECOVER
+		
+	db 41, PILOSWINE
+		db ICY_WIND
+		db EARHQUAKE
 		db MIST
 		db BLIZZARD
 
@@ -187,23 +223,29 @@ JasmineGroup:
 
 	; party
 
-	db 30, MAGNEMITE
+	db 32, MAGNETON
 		db THUNDERBOLT
-		db SUPERSONIC
+		db CONFUSE_RAY
 		db SONICBOOM
 		db THUNDER_WAVE
 
-	db 30, MAGNEMITE
+	db 32, MAGNETON
 		db THUNDERBOLT
-		db SUPERSONIC
+		db CONFUSE_RAY
 		db SONICBOOM
 		db THUNDER_WAVE
 
-	db 35, STEELIX
+	db 36, STEELIX
 		db SCREECH
-		db SUNNY_DAY
-		db ROCK_THROW
+		db SANDSTORM
+		db ROCK_SLIDE
 		db IRON_TAIL
+		
+	db 38, AMPHAROS
+		db THUNDERPUNCH
+		db IRON_TAIL
+		db HEAL_BELL
+		db 
 
 	db $ff ; end
 
@@ -221,13 +263,19 @@ ChuckGroup:
 
 	; party
 
-	db 27, PRIMEAPE
-		db LEER
-		db RAGE
+	db 30, PRIMEAPE
+		db SCREECH
+		db ROCK_SLIDE
 		db KARATE_CHOP
-		db FURY_SWIPES
+		db TAKE_DOWN
+		
+	db 33, FARFETCH'D
+		db RAZOR_LEAF
+		db KARATE_CHOP
+		db MEDITATE
+		db WING_ATTACK
 
-	db 30, POLIWRATH
+	db 35, POLIWRATH
 		db HYPNOSIS
 		db MIND_READER
 		db SURF
@@ -249,25 +297,35 @@ ClairGroup:
 
 	; party
 
-	db 37, DRAGONAIR
+	db 48, ALTARIA
+		db HEAL_BELL
+		db FLY
+		db U_TURN
+		db DRAGONBREATH
+	db 47, DRAGONAIR
 		db THUNDER_WAVE
 		db SURF
-		db SLAM
+		db BODY_SLAM
 		db DRAGONBREATH
 
-	db 37, DRAGONAIR
+	db 47, DRAGONAIR
 		db THUNDER_WAVE
 		db THUNDERBOLT
-		db SLAM
+		db BODY_SLAM
 		db DRAGONBREATH
 
-	db 37, DRAGONAIR
+	db 47, DRAGONAIR
 		db THUNDER_WAVE
 		db ICE_BEAM
-		db SLAM
+		db BODY_SLAM
 		db DRAGONBREATH
+	db 50, GYARADOS
+		db DRAGONBREATH
+		db WATERFALL
+		db DOUBLE_EDGE
+		db CRUNCH
 
-	db 40, KINGDRA
+	db 52, KINGDRA
 		db SMOKESCREEN
 		db SURF
 		db HYPER_BEAM
